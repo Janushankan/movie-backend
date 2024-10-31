@@ -3,11 +3,8 @@ import {createMovie, deleteMovie, editMovie, getAllMovies} from "../controllers/
 
 const router = express.Router();
 
-
-
 router.route('/movies').get(getAllMovies);
 router.route('/movie/:id').put(editMovie).delete(deleteMovie);
 router.route('/movie').post(createMovie);
-
 
 export default router;
